@@ -1,0 +1,50 @@
+.img {
+    height: 55vh;
+}
+.project, .project2 {
+    font-size: 60px;
+    font-weight: bold;
+    color: white
+}
+.project2 {
+    font-size: 80px;
+    margin-top: -35px;
+    opacity: .1;
+}
+.quote {
+    color: white;
+    opacity: .5;
+    font-size: 15px;
+    letter-spacing: 2px
+}
+.img_hover1, .img_hover2, .img_hover3, .img_hover4, .img_hover7, .img_hover6 {
+    opacity: .8;
+}
+.img_hover7 {
+    cursor: not-allowed
+}
+.img_hover:hover, .img_hover1:hover, .img_hover2:hover, .img_hover3:hover, .img_hover4:hover, .img_hover5:hover, .img_hover6:hover, .img_hover7:hover, .img_hover8:hover {
+    opacity: .1;
+}
+#display, #display1, #display2, #display3, #display4, #display5, #display6, #display7, #display8 {
+    visibility: hidden;
+    position: absolute;
+    top: 40%;
+    opacity: 1;
+    font-size: 14px;
+    color: #ff6c00;   
+}
+@media screen and (max-width: 600px) {
+    .project {
+        font-size: 50px
+    }
+    .project2 {
+        font-size: 60px
+    }
+    #display, #display1, #display2, #display3, #display4, #display5, #display6, #display7, #display8 {
+        font-size: 11px;
+    }
+    .quote {
+        font-size: 12px
+    }
+}

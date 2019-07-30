@@ -1,0 +1,52 @@
+body, nav {
+    background-color: #000000;
+}
+
+a {
+    color: aliceblue;
+    text-decoration: none
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 50px;
+    cursor: none;
+}
+@media screen and (max-width: 700px) {
+    .navbar-brand {
+        font-size: 35px
+    }
+}
+
+.nav-link {
+    font-weight: bold;
+    font-size: 16px;
+   transition-duration: 1s;
+    /* transition-timing-function: ease-in-out; */
+    /* transition-delay: 1s; */
+}
+
+.nav-link:hover {
+    display: block;
+    padding: 0.7rem;
+    border-bottom: 1px solid #ff6c00;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px
+}
+
+.active {
+    display: block;
+    padding: 0.7rem;
+    border-bottom: 3px solid #ff6c00;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #ff6c00;
+    transition-duration: 1s;
+}
+
+.navbar-toggler{
+    border: 1px solid #ff6c00;
+    border-radius: 50px
+}

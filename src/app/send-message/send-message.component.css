@@ -1,0 +1,19 @@
+.top {
+    margin-top: 120px;
+}
+img {
+    opacity: .8
+}
+input, textarea {
+    color: #ff6c00;
+    border-right: 2px solid #ff6c00;
+    border-left: 2px solid #ff6c00;
+    font-size: 20px;
+}
+.btn {
+    background-color: #ff6c00;
+    color: white
+}
+.copyright {
+    text-align: center
+}

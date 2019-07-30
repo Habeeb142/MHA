@@ -1,0 +1,49 @@
+.abt, .abt2 {
+    font-size: 70px;
+    font-weight: bold;
+    position: relative;
+}
+.abt2 {
+   opacity: .1;
+   margin-top: -70px
+}
+.col-form-label {
+    font-weight: bold;
+    font-size: 21px;
+}
+.form-control{
+    font-size: 21px
+}
+.btn{
+    background-color: #ff6c00;
+    color: 
+    white;
+    font-weight:  bold;
+    animation-name: btn;
+    animation-duration: 1s;
+    animation-iteration-count: infinite
+}
+img {
+    opacity: .8;
+}
+@keyframes btn {
+    from { background-color: #ff6c00; }
+    to { background-color: black; color: #ff6c00; border-right: 2px solid #ff6c00; border-left: 2px solid#ff6c00 }
+}
+@media screen and (max-width: 600px) {
+    #hide {
+        display: none
+    }
+    .abt, .abt2 {
+        font-size: 50px;
+        font-weight: bold;
+        position: relative;
+    }
+    .abt{
+        margin-top: 100px
+    
+    }
+    .abt2{
+        margin-top: -30px
+    }
+}

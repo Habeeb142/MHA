@@ -1,0 +1,23 @@
+<div class="row top">
+  <div class="col-md-6">
+    <img class="img col-12" src="assets/personal/pic4.jpg" alt="Habeeb">
+  </div>
+  <div class="col-md-6 card p-3">
+    <form class="col-12 card-body form" (submit) = "send_message()" >
+      <div class="form-group">
+        <input class="form-control p-3 m-2" type="text" [(ngModel)] = "msg_props.name" [ngModelOptions]="{standalone: true}" placeholder="Your Name" onfocus="this.placeholder='Start typing your name...'">
+
+        <input class="form-control p-3 m-2" type="email" [(ngModel)] = "msg_props.email" [ngModelOptions]="{standalone: true}" placeholder="Your Email" onfocus="this.placeholder='Start typing your email...'">
+
+        <input class="form-control p-3 m-2" type="text" [(ngModel)] = "msg_props.subject" [ngModelOptions]="{standalone: true}" placeholder="Your Subject" onfocus="this.placeholder='Start typing the subject...'">
+
+        <textarea name="message" class="p-3 m-2 form-control mt-5" rows="10" placeholder="Your Message" onfocus="this.placeholder='Start typing your messages...'"></textarea>
+
+        <button type="submit" class="m-2 btn col-12 mt-5">Send Message</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="copyright mt-5 font-weight-bold">
+  Copyright (C) {{ year }} 
+</div>

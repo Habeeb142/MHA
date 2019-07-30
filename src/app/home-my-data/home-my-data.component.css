@@ -1,0 +1,54 @@
+.carousel-caption {
+    top: 30px;
+    text-align: left;
+    right: 20%;
+}
+
+
+.name {
+    color: #ff6c00;
+    font-weight: bold;
+    font-size: 60px;
+}
+
+.i-am {
+    font-size: 50px
+}
+
+img {
+    opacity: .8;
+}
+
+@media screen and (max-width: 600px) {
+    .carousel-caption {
+        top: 30px;
+        text-align: start;
+    }
+   
+    .col-sm-1 {
+        position: relative;
+        opacity: 0.2;
+        height: 100%;
+        right: 2%;
+    }
+
+    .name {
+        color: #ff6c00;
+        font-weight: bold;
+        font-size: 40px;
+    }
+    
+    .i-am {
+        font-size: 30px
+    }
+
+    #name {
+        word-wrap: break-word;
+    }
+
+    .carousel-indicators {
+        position: fixed; 
+        /* margin-top:  330%  */
+    }
+    
+  }

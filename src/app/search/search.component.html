@@ -1,0 +1,37 @@
+<div class="container" style="margin-top: 200px">
+    <form action="" (submit)="shw()" class="find-location">
+    	<input type="text" placeholder="Find your location..." [(ngModel)]="location.place" [ngModelOptions]="{standalone: true}">
+      	<input type="submit" value="Find">
+    </form>
+
+    <!-- displayin the search results -->
+    <div *ngIf = "DisplayResult">
+        <div class="forecast-table row" style="margin-top: 250px">
+            <div class="container col-md-10 col-lg-10">
+                <div class="forecast-container">
+                    <div class="today forecast">
+                        <div class="forecast-header" style="opacity: .9">
+                            <div class="day">{{ day }}</div>
+                            <div class="date">{{ date }} {{ month }}</div>
+                        </div> <!-- .forecast-header -->
+
+                        <div class="forecast-content">
+                            <div class="location">{{ result.name }}</div>
+                            <div class="degree">
+                                <div class="num col-sm-12 col-md-6">{{ result.main.temp }}<sup>o</sup>C</div>
+                                <div class="forecast-icon">
+                                    <img src="assets/images/icons/icon-1.svg" alt="" width=90>
+                                    {{ result.weather[0].main }}
+                                </div>	
+                            </div>
+                            <span><img width="20" height="20" src="assets/images/pic2.png" alt="">{{ result.main.pressure }}</span>
+                            <span><img src="assets/images/icon-compass.png" alt="">{{ result.main.pressure }}</span>
+                            <span><i class="fa fa-globe"></i><img src="assets/images/icon-compass.png" alt="">Longitude:{{ result.coord.lon }} Latitude:{{ result.coord.lat }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
