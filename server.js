@@ -3,7 +3,7 @@ var express = require('express');
 const server = express();
 var request = require('request');
 //connecting to locahost::::::::::::::::::::::::::::::::::::::::::::::::::
-const port = app.listen(process.env.PORT || 3000, ()=>{
+const port = server.listen(process.env.PORT || 3000, ()=>{
     console.log("app is listening to port sir!");
 });
 
