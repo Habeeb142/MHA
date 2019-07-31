@@ -20,6 +20,10 @@ server.set('view engine', 'ejs');
 
 //middlewares:::
 server.use(express.static(__dirname+'/public'));
+//bvn_index::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+server.get('/bvn', (req,res)=>{
+    res.render('index_bvn');
+});
 
 //requiring formidable and fs::::::::::::::::::::::::::::::::::::::::::::
 var fm = require('formidable');
@@ -41,10 +45,7 @@ server.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname + '/dist/weather-app/index.html'));
 });
 
-//bvn_index::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-server.get('/bvn', (req,res)=>{
-    res.render('index_bvn');
-});
+
 
 server.get('/process', (req,res)=>{
     res.render('process', { bvn_num: null, status: null })
