@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LTIL</title>
+    <link rel="stylesheet" href="signupstyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/animate.css">
+    <link rel="shortcut icon" href="images/bg8.jpg">
+    
+</head>
+<script>
+ 
+</script>
+<body>
+    <div class="bg animated flash mt-5 col-12 col-md-4 offset-md-4">
+        <div class="mt-3">
+            <a href="/bvn"><img src="icons/back.png" alt="back"></a>
+        </div>
+        <div align="center" class="bg-text">   
+            LOREM Technical Industrial Limited
+        </div>
+        <div style="font-style: italic; text-align: center; font-size: 13px; font-weight: bold" class="mb-5">
+            ready to serve...
+        </div>
+        <% if(status=="bvn_err"){ %>
+        <div class="alert alert-danger text-center text-uppercase font-weight-bold font-italic" style="font-size: 12px">
+            Sorry! your BVN does not exist
+        </div>
+        <%} %>
+        <% if(status=="fillform_err"){ %>
+        <div class="alert alert-warning text-sm-center text-uppercase font-italic font-weight-bold" style="font-size: 12px">
+            Please fill the box below correctly
+        </div>
+        <%} %>
+        <% if(status=="success"){ %>
+        <div class="alert alert-success text-sm-center font-weight-bold" style="font-size: 11px">
+            <span style="color: green">Congratulations! </span>user with BVN: <span style="font-style: italic; color: green"><%= bvn_num %></span>, you are hereby validated. Please click <a href="/">proceed</a>.
+        </div>
+        <%} %>
+        <form action="/validate" method="POST">
+            <div class="input-group mb-3 animated rollIn">
+                <input type="number" class="form-control" name="bvn_num"  placeholder="BVN here..." aria-label="BVN number" aria-describedby="basic-addon2" value= "<%= bvn_num %>" >
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">BVN</span>
+                </div>
+            </div>
+            
+            <div class="animated zoomInDown">
+                <button type="submit" class="btn btn-outline-light col-12 mt-3">Go!</button>
+
+            </div>
+        </form>
+        
+        <div id="bottom">
+            Lorem Technical Industrial Limited is a manufacturing company that is ready to give her customer the best wires and cables for an ideal home
+         </div>
+         <div id="bottom">
+             (C) copyright 2019
+         </div>
+    </div>
+</body>
+</html>
