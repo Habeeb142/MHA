@@ -1,0 +1,46 @@
+body {
+    background-image: url('https://ramsatt.com/wp-content/uploads/2019/04/platforms.jpg');
+    opacity: 0.9;
+    background-size: contain; 
+}
+
+.bg {
+    height: 90vh;
+    /* width: 400px; */
+    background-color: rgba(200, 100, 200, 0.3);
+    border: 1px solid white;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+    box-shadow: 6px 6px 5px #A4759F;
+}
+
+.bg-text {
+    color: white;
+    letter-spacing: 3px;
+    font-size: 25px;
+}
+
+#btn {
+    color: white;
+    border: 1px solid white
+}
+
+#btn:hover {
+    border: 1px solid black;
+    background: rgb(240, 38, 220);
+    color: black;
+}
+
+#bottom {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    position: relative;
+    top: 100px
+}
+
+.bg_body {
+    background: url(images/bg10.jpg);
+    background-size:cover;
+}
+
