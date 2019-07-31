@@ -7,23 +7,14 @@ const port = server.listen(process.env.PORT || 3000, ()=>{
     console.log("app is listening to port sir!");
 });
 
-//declaring my secret key::::::::::::::::::::::::::::::::::::::::::::::::
-        // live url
-        // let url = 'https://api.ravepay.co/v2/kyc/bvn/';
+//developing url::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+let url = 'https://ravesandboxapi.flutterwave.com/v2/kyc/bvn/';
+let secret_key = 'FLWSECK-7e256e58ed1b03574a5fdc7205ed2b0f-X';
 
-        //developing url::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-        let url = 'https://ravesandboxapi.flutterwave.com/v2/kyc/bvn/';
-        let secret_key = 'FLWSECK-7e256e58ed1b03574a5fdc7205ed2b0f-X';
+//below codes are for bvn app::::::::::::::::::::::::::::::::::::::::::::
 
 //setting engine to ejs::::::::::::::::::::::::::::::::::::::::::::::::::
 server.set('view engine', 'ejs');
-
-//middlewares:::
-server.use(express.static(__dirname+'/public'));
-//bvn_index::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-server.get('/bvn', (req,res)=>{
-    res.render('index_bvn');
-});
 
 //requiring formidable and fs::::::::::::::::::::::::::::::::::::::::::::
 var fm = require('formidable');
@@ -32,25 +23,21 @@ var fs = require('fs');
 //creating a method from formidable class::::::::::::::::::::::::::::::
 var form = new fm.IncomingForm();
 
+//middlewares:::
+server.use(express.static(__dirname+'/public'));
+
 //requiring body-parser::::::::::::::::::::::::::::::::::::::::::::::::::::
 var bodyParser = require('body-parser');
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({extended:true}));
 
-// Serve static files....
-server.use(express.static(__dirname + '/dist/weather-app'));
-
-// Send all requests to index.html
-server.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname + '/dist/weather-app/index.html'));
+//bvn_index::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+server.get('/bvn', (req,res)=>{
+    res.render('index_bvn');
 });
-
-
-
 server.get('/process', (req,res)=>{
     res.render('process', { bvn_num: null, status: null })
 });
-
 server.post('/validate', (req, res)=>{
     let bvn_input = req.body.bvn_num;
     if(bvn_input==''){
@@ -72,6 +59,16 @@ server.post('/validate', (req, res)=>{
     });
     }
 });
+//end of bvn app:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+// Serve static files....
+server.use(express.static(__dirname + '/dist/weather-app'));
+
+// Send all requests to index.html for mustaphahabeeb.herokuapp.com::::::::::::
+server.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname + '/dist/weather-app/index.html'));
+});
+
 
 
 
