@@ -1,0 +1,15 @@
+body {
+    background-image: url('images/bg3.jpg');
+    background-size: contain;
+}
+
+.bg {
+    color: white
+}
+#bottom {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    position: relative;
+    top: 90px
+}
