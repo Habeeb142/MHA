@@ -65,9 +65,10 @@ server.post('/validate', (req, res)=>{
 server.use(express.static(__dirname + '/dist/weather-app'));
 
 // Send all requests to index.html for mustaphahabeeb.herokuapp.com::::::::::::
-server.get('/*', function(req, res) {
+server.get('/', function(req, res) {
   res.sendFile(path.join(__dirname + '/dist/weather-app/index.html'));
 });
+
 
 
 
