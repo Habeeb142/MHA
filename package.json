@@ -30,7 +30,7 @@
     "zone.js": "~0.8.26",
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "formidable": "^1.2.1",
    
     "request" : "^2.88.0"
